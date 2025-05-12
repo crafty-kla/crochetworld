@@ -4,24 +4,93 @@
     <meta charset="UTF-8">
     <title>Lavs Crochet World</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
-        .shop-button {
-            padding: 10px 20px;
-            font-size: 18px;
-            background-color: #0070ba;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-        }
+        body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+
+    .carousel-container {
+      position: relative;
+      max-width: 500px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-images img {
+      width: 100%;
+      flex-shrink: 0;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-buttons button {
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .shop-button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #0070ba;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
     </style>
 </head>
 <body>
     <h1>Welcome to Lav's Crochet World</h1>
+    <div class="carousel-container">
+        <div class="carousel-images" id="carousel">
+          <img src="image1.jpg" alt="Image 1" />
+          <img src="image2.jpg" alt="Image 2" />
+          <img src="image3.jpg" alt="Image 3" />
+        </div>
+        <div class="carousel-buttons">
+          <button onclick="prevSlide()">&#10094;</button>
+          <button onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
     <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=YOUREMAIL@example.com&item_name=Your+Product&amount=10.00&currency_code=USD" 
        class="shop-button">
         Shop Now
     </a>
+    <script>
+    let index = 0;
+    const slides = document.querySelectorAll('#carousel img');
+
+    function showSlide(i) {
+      index = (i + slides.length) % slides.length;
+      document.getElementById('carousel').style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+      showSlide(index + 1);
+    }
+
+    function prevSlide() {
+      showSlide(index - 1);
+    }
+  </script>
 </body>
 </html>
