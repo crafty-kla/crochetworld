@@ -6,10 +6,11 @@
     <style>
         body {
             text-align: center;
-            background-color: #FFF5EE;
+            background-color: #FBE7E6;
         }
         #main-heading {
             font-family: cursive;
+            background-color: #FACCCC;
         }
         .carousel-container {
       position: relative;
@@ -17,7 +18,7 @@
       height: 500px;
       margin: auto;
       overflow: hidden;
-            background-color: #eec0c8;
+            background-color: #FBE7E6;
     }
 
     .carousel-images {
@@ -62,11 +63,32 @@
       text-decoration: none;
         position: relative;
         top: 100px;
+        font-family: cursive;
+    }
+        .footer {
+      background-color: #FACCCC;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer a {
+      color: black;
+      text-decoration: none;
+        font-family: cursive;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
     }
     </style>
 </head>
 <body>
     <main class="header">
+        <img src="Logo.jpg" alt="Logo">
         <h1 id="main-heading">Welcome to Lav's Crochet World</h1>
     </main>
     <div class="carousel-container">
@@ -84,6 +106,9 @@
        class="shop-button">
         Shop Now
     </a>
+    <footer class="footer">
+        <p>&copy; 2025 Crafty Kla. All rights reserved. | <a href="https://www.paypal.me/craftykla24" target="_blank">Donate</a></p>
+      </footer>
     <script>
     let index = 0;
     const slides = document.querySelectorAll('#carousel img');
