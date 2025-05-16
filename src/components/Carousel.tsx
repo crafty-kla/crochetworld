@@ -3,7 +3,7 @@ import './Carousel.css';
 
 const Carousel: React.FC = () => {
   const [index, setIndex] = useState(0);
-  const images = ['/stars.jpg', '/shoes.jpg', '/table.jpg', 'coster.jpg', 'frogs.jpg', 'bunny.jpg', 'christmas.jpg', 'image1.jpg'];
+  const images = ['./stars.jpg', './shoes.jpg', './table.jpg', './coster.jpg', './frogs.jpg', './bunny.jpg', './christmas.jpg', './image1.jpg'];
 
   const showSlide = (i: number) => {
     setIndex((i + images.length) % images.length);
