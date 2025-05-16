@@ -1,0 +1,17 @@
+.header {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.header img {
+    width: 100px;
+    height: 100px;
+}
+
+#main-heading {
+    font-family: cursive;
+    background-color: #FACCCC;
+    align-content: center;
+    margin: 0 2px;
+    width: 100%;
+} 
