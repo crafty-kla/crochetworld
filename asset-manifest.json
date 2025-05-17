@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/crochetworld/static/css/main.cbb85bdb.css",
-    "main.js": "/crochetworld/static/js/main.24157497.js",
+    "main.js": "/crochetworld/static/js/main.a45486ef.js",
     "static/js/453.cb0a4cce.chunk.js": "/crochetworld/static/js/453.cb0a4cce.chunk.js",
     "index.html": "/crochetworld/index.html",
     "main.cbb85bdb.css.map": "/crochetworld/static/css/main.cbb85bdb.css.map",
-    "main.24157497.js.map": "/crochetworld/static/js/main.24157497.js.map",
+    "main.a45486ef.js.map": "/crochetworld/static/js/main.a45486ef.js.map",
     "453.cb0a4cce.chunk.js.map": "/crochetworld/static/js/453.cb0a4cce.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cbb85bdb.css",
-    "static/js/main.24157497.js"
+    "static/js/main.a45486ef.js"
   ]
 }
