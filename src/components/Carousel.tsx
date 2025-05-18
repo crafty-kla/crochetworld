@@ -4,25 +4,25 @@ import './Carousel.css';
 const Carousel: React.FC = () => {
   const [index, setIndex] = useState(0);
   const images = [
-    './stars.jpg',
-    './shoes.jpg',
-    './table.jpg',
-    './coster.jpg',
-    './frogs.jpg',
-    './bunny.jpg',
-    './christmas.jpg',
-    './image1.jpg',
-    './french_berret1.jpeg',
-    './french_berret2.jpeg',
-    './french_berret3.jpeg',
-    './french_berret4.jpeg',
-    './french_berret5.jpg',
-    './flower.jpg',
-    './ornament.jpg',
-    './hair_pin.jpg',
-    './bouquet.jpg',
-    './bell.jpg',
-    './purse.jpg',
+    { src: '/stars.jpg', name: 'Item 1' },
+    { src: '/shoes.jpg', name: 'Item 2' },
+    { src: '/table.jpg', name: 'Item 3' },
+    { src: '/coster.jpg', name: 'Item 4' },
+    { src: '/frogs.jpg', name: 'Item 5' },
+    { src: '/bunny.jpg', name: 'Item 6' },
+    { src: '/christmas.jpg', name: 'Item 7' },
+    { src: '/image1.jpg', name: 'Item 8' },
+    { src: '/french_berret1.jpeg', name: 'Item 9' },
+    { src: '/french_berret2.jpeg', name: 'Item 10' },
+    { src: '/french_berret3.jpeg', name: 'Item 11' },
+    { src: '/french_berret4.jpeg', name: 'Item 12' },
+    { src: '/french_berret5.jpg', name: 'Item 13' },
+    { src: '/flower.jpg', name: 'Item 14' },
+    { src: '/ornament.jpg', name: 'Item 15' },
+    { src: '/hair_pin.jpg', name: 'Item 16' },
+    { src: '/bouquet.jpg', name: 'Item 17' },
+    { src: '/bell.jpg', name: 'Item 18' },
+    { src: '/purse.jpg', name: 'Item 19' }
   ];
 
   const showSlide = (i: number) => {
@@ -48,8 +48,11 @@ const Carousel: React.FC = () => {
         className="carousel-images" 
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
-        {images.map((src, i) => (
-          <img key={i} src={src} alt={`Slide ${i + 1}`} />
+        {images.map((image, i) => (
+          <div key={i} className="carousel-slide">
+            <img src={image.src} alt={image.name} />
+            <div className="image-caption">{image.name}</div>
+          </div>
         ))}
       </div>
       <div className="carousel-buttons">
